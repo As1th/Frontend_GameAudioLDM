@@ -53,6 +53,11 @@ components:
       properties: {role: card}
       type: ColumnPanel
       layout_properties: {grid_position: 'YSKFPH,ECAVUJ'}
+    - name: generate_button
+      properties: {text: GENERATE}
+      type: Button
+      layout_properties: {grid_position: 'IKTUYV,OVNMEL'}
+      event_bindings: {click: generate_button_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
