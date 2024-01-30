@@ -1,0 +1,77 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html', visible: true}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{"VVQYJU":35,"RVQVOR":25}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card, border: GROOVE, col_spacing: none}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BJKASU,PZFQQZ', full_width_row: false}
+    components:
+    - name: prompt
+      properties: {tooltip: Enter Text Prompt..., placeholder: Enter Text Prompt...,
+        align: center, spacing_below: large, spacing_above: large, bold: true, font_size: 43,
+        font: Architects Daughter}
+      type: TextBox
+      layout_properties: {grid_position: 'LQKCUS,KBZLCO', full_width_row: false}
+      data_bindings: []
+    data_bindings: []
+  - name: number_of_gens_label
+    properties: {text: 'Number of Generations:', align: right, font_size: 20, spacing_above: large,
+      font: Architects Daughter}
+    type: Label
+    layout_properties: {grid_position: 'BLJJOU,VVQYJU'}
+  - name: number_of_gens
+    properties:
+      items: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+      align: left
+      font_size: 19
+      spacing_above: large
+    type: DropDown
+    layout_properties: {grid_position: 'BLJJOU,RVQVOR'}
+  - name: card_4
+    properties: {role: card, visible: false}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'SWZLOD,NMEWKY'}
+  - name: card_2
+    properties: {role: card, spacing_above: large, col_spacing: medium}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'SWZLOD,XYXHHI NMMEBT,RMGSOJ', full_width_row: false}
+    components:
+    - name: label_1
+      properties: {text: 'Negative Prompt:', align: right, font_size: 16}
+      type: Label
+      layout_properties: {grid_position: 'YSKFPH,LDMJLD'}
+    - name: negative_prompt
+      properties: {placeholder: 'low quality, average quality', text: 'low quality,
+          average quality'}
+      type: TextBox
+      layout_properties: {grid_position: 'YSKFPH,NXXSMR'}
+    - name: label_1_copy
+      properties: {text: 'Negative Prompt:', align: right, font_size: 16}
+      type: Label
+      layout_properties: {grid_position: ',ZQNRYC'}
+    - name: negative_prompt_copy
+      properties: {placeholder: Negative Prompt}
+      type: TextBox
+      layout_properties: {grid_position: ''}
+  - name: generate_button
+    properties: {text: Generate..., border: groove, background: '', font_size: 23,
+      spacing_above: large, bold: false, foreground: 'theme:Primary 500', icon: 'fa:tasks'}
+    type: Button
+    layout_properties: {grid_position: 'SWZLOD,XYXHHI CNYBJP,VJWZLZ', row_background: 'theme:Gray
+        600', full_width_row: true}
+    event_bindings: {click: generate_button_click}
+  - name: card_3
+    properties: {role: card, visible: false}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'SWZLOD,DPRIFJ'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}

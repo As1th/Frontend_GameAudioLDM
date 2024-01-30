@@ -1,73 +1,12 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', visible: true}
+  properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
-  components:
-  - name: card_1
-    properties: {role: card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'BJKASU,PZFQQZ'}
-    components:
-    - name: prompt
-      properties: {tooltip: Enter Text Prompt..., placeholder: Enter Text Prompt...,
-        align: center}
-      type: TextBox
-      layout_properties: {grid_position: 'LQKCUS,KBZLCO'}
-  - name: card_5
-    properties: {role: card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'OAHQLI,YMNQCV'}
-    components:
-    - name: label_2
-      properties: {text: 'Number of Generations:'}
-      type: Label
-      layout_properties: {grid_position: 'NTCNPW,KHAEPQ'}
-    - name: label_1
-      properties: {text: 'Negative Prompt:', align: right}
-      type: Label
-      layout_properties: {grid_position: 'NTCNPW,OUUIDP JKVYID,CTRUXT'}
-    - name: drop_down_1
-      properties:
-        items: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-      type: DropDown
-      layout_properties: {grid_position: 'NTCNPW,OUUIDP CFBFFU,AVWRHS'}
-  - name: card_2
-    properties: {role: card, spacing_above: large, col_spacing: medium}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'SWZLOD,XYXHHI', full_width_row: false}
-    components:
-    - name: card_3
-      properties: {role: card}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'YSKFPH,ZDLFQX'}
-    - name: negativePrompt
-      properties: {placeholder: Negative Prompt}
-      type: TextBox
-      layout_properties: {grid_position: 'YSKFPH,NXXSMR'}
-    - name: card_4
-      properties: {role: card}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'YSKFPH,ECAVUJ'}
-    - name: generate_button
-      properties: {text: GENERATE}
-      type: Button
-      layout_properties: {grid_position: 'IKTUYV,OVNMEL'}
-      event_bindings: {click: generate_button_click}
-  - name: button_1
-    properties: {text: audio_player_1}
-    type: Button
-    layout_properties: {grid_position: ''}
-    event_bindings: {click: button_1_click}
-  - name: button_2
-    properties: {text: button_2}
-    type: Button
-    layout_properties: {grid_position: 'WNSRSA,FHENNA'}
-    event_bindings: {click: button_2_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

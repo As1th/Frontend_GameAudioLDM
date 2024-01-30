@@ -553,7 +553,7 @@ body>div[data-notify="container"].alert-warning>span[data-notify="title"]{
   font-weight: 500;
   padding: 8px 16px;
   min-height: calc(16px + 1.42857143em);
-  text-transform: uppercase;
+  
 
   border: 0;
   background-image: none;

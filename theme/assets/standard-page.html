@@ -1,5 +1,5 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">
-
+<link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
 <div class="structure">
   <div class="app-bar" anvil-drop-container=".anvil-container" anvil-drop-redirect=".placeholder">
     <a class="sidebar-toggle" anvil-if-slot-empty="top-left-btn" anvil-hide-if-slot-empty="left-nav" anvil-drop-slot="top-left-btn" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
@@ -36,12 +36,15 @@
 <script>
  var sound = new Howl({
   src: ['https://file-examples.com/storage/fed61549c865b2b5c9768b5/2017/11/file_example_WAV_1MG.wav'],
-  html5: true,
-   autoplay: true,
-  loop: true
+  sprite: {
+    blast: [0, 3000],
+    laser: [4000, 1000],
+    winner: [6000, 5000]
+  }
 });
 
-sound.play();
+// Shoot the laser!
+sound.play('laser');
 </script>
 <script>
 function PlaySound() {

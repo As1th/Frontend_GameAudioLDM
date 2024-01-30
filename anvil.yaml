@@ -1,12 +1,13 @@
-allow_embedding: false
-package_name: Material_Design_1
-name: Frontend_GameAudioLDM
-startup_form: Form1
-uplink_visible: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
-metadata: {title: GameAudioLDM}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+startup: {type: form, module: Input}
+package_name: Material_Design_1
+allow_embedding: false
+name: Frontend_GameAudioLDM
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {title: GameAudioLDM}
+startup_form: null
+uplink_visible: true
