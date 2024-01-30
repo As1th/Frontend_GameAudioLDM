@@ -32,7 +32,17 @@
  <!-- Audio file -->
 <audio id="audio" src="https://file-examples.com/storage/fed61549c865b2b5c9768b5/2017/11/file_example_WAV_1MG.wav" autostart="false" ></audio>
 <audio id="audio2" autostart="false" ></audio>
+<script src="_/theme/Howler/howler.js"></script>
+<script>
+ var sound = new Howl({
+  src: ['https://file-examples.com/storage/fed61549c865b2b5c9768b5/2017/11/file_example_WAV_1MG.wav'],
+  html5: true,
+   autoplay: true,
+  loop: true
+});
 
+sound.play();
+</script>
 <script>
 function PlaySound() {
           var sound = document.getElementById("audio");
@@ -41,7 +51,7 @@ function PlaySound() {
 
 </script>
 <script>
-  import howler
+  
 function GetSound() {
           var sound = document.getElementById("audio");
           return sound;
