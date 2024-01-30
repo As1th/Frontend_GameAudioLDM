@@ -5,7 +5,7 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+ 
     # Any code you write here will run before the form opens.
   def player_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -23,8 +23,10 @@ class Form1(Form1Template):
       self.negativePrompt.text = "The species is " + iris_category
 
   def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    sound = self.call_js('GetSound')
+    print(sound.duration)
+    self.call_js('SetSound', sound)
+    
 
   def button_1_click(self, **event_args):
     self.call_js('PlaySound')
