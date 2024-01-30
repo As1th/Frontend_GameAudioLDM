@@ -29,7 +29,17 @@
   <div class="nav-shield"></div>
 </div>
 <div anvil-drop-default anvil-drop-redirect=".placeholder" anvil-drop-container=".anvil-container"></div>
- 
+ <!-- Audio file -->
+<audio id="audio" src="https://file-examples.com/storage/fed61549c865b2b5c9768b5/2017/11/file_example_WAV_1MG.wav" autostart="false" ></audio>
+
+
+<script>
+function PlaySound() {
+          var sound = document.getElementById("audio");
+          sound.play()
+      }
+  
+</script>
 <script>
   function hideSidebar() {
     var ln = $('.structure > .nav-holder > .left-nav');
