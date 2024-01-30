@@ -7,6 +7,55 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'LHVXQZ,EJPDOE'}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'LHVXQZ,EJPDOE'}
+  - name: check_box_1
+    properties: {text: check_box_1}
+    type: CheckBox
+    layout_properties: {grid_position: 'POMOEI,PIVKVQ'}
+  - name: button_1
+    properties: {text: button_1}
+    type: Button
+    layout_properties: {grid_position: 'POMOEI,XTFIRR'}
+  - name: check_box_2
+    properties: {text: '', allow_indeterminate: true}
+    type: CheckBox
+    layout_properties: {grid_position: 'POMOEI,ZWXSTH'}
+  - name: button_2
+    properties: {text: button_2}
+    type: Button
+    layout_properties: {grid_position: 'POMOEI,NDBKYY'}
+  - name: button_3
+    properties: {text: button_3}
+    type: Button
+    layout_properties: {grid_position: 'RHFHPE,LAUQCS'}
+  - name: button_4
+    properties: {text: button_4}
+    type: Button
+    layout_properties: {grid_position: 'RHFHPE,VUOIAZ'}
+  - name: button_5
+    properties: {text: button_5}
+    type: Button
+    layout_properties: {grid_position: 'ADCKRW,TPQPME'}
+  - name: button_6
+    properties: {text: button_6}
+    type: Button
+    layout_properties: {grid_position: 'ADCKRW,DWQBLN'}
+  - name: button_7
+    properties: {text: button_7}
+    type: Button
+    layout_properties: {grid_position: 'OAVYBC,HZQAFO'}
+  - name: button_8
+    properties: {text: button_8}
+    type: Button
+    layout_properties: {grid_position: 'OAVYBC,JUDOLY'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
