@@ -16,14 +16,14 @@ components:
     - name: prompt
       properties: {tooltip: Enter Text Prompt..., placeholder: Enter Text Prompt...,
         align: center, spacing_below: large, spacing_above: large, bold: true, font_size: 43,
-        font: Architects Daughter}
+        font: Chilanka}
       type: TextBox
       layout_properties: {grid_position: 'LQKCUS,KBZLCO', full_width_row: false}
       data_bindings: []
     data_bindings: []
   - name: number_of_gens_label
-    properties: {text: 'Number of Generations:', align: right, font_size: 20, spacing_above: large,
-      font: Architects Daughter}
+    properties: {text: 'Number of Generations:', align: right, font_size: 22, spacing_above: large,
+      font: Chilanka}
     type: Label
     layout_properties: {grid_position: 'BLJJOU,VVQYJU'}
   - name: number_of_gens
@@ -44,7 +44,7 @@ components:
     layout_properties: {grid_position: 'SWZLOD,XYXHHI NMMEBT,RMGSOJ', full_width_row: false}
     components:
     - name: label_1
-      properties: {text: 'Negative Prompt:', align: right, font_size: 16}
+      properties: {text: 'Negative Prompt:', align: right, font_size: 17, font: Chilanka}
       type: Label
       layout_properties: {grid_position: 'YSKFPH,LDMJLD'}
     - name: negative_prompt
@@ -53,7 +53,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'YSKFPH,NXXSMR'}
     - name: label_1_copy
-      properties: {text: 'Negative Prompt:', align: right, font_size: 16}
+      properties: {text: 'Negative Prompt:', align: right, font_size: 17, font: Chilanka}
       type: Label
       layout_properties: {grid_position: ',ZQNRYC'}
     - name: negative_prompt_copy
@@ -61,8 +61,9 @@ components:
       type: TextBox
       layout_properties: {grid_position: ''}
   - name: generate_button
-    properties: {text: Generate..., border: groove, background: '', font_size: 23,
-      spacing_above: large, bold: false, foreground: 'theme:Primary 500', icon: 'fa:tasks'}
+    properties: {border: groove, foreground: 'theme:Primary 500', text: Generate...,
+      font_size: 25, font: Chilanka, spacing_above: large, background: '', bold: true,
+      icon: 'fa:tasks'}
     type: Button
     layout_properties: {grid_position: 'SWZLOD,XYXHHI CNYBJP,VJWZLZ', row_background: 'theme:Gray
         600', full_width_row: true}
