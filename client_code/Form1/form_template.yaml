@@ -1,61 +1,102 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', border: groo}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{"PIVKVQ":2,"OLASRF":28,"ZWXSTH":2,"NDBKYY":28}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
   - name: spacer_2
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'LHVXQZ,EJPDOE'}
+    layout_properties: {grid_position: ''}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'LHVXQZ,EJPDOE'}
+    layout_properties: {grid_position: ''}
   - name: check_box_1
-    properties: {text: check_box_1}
+    properties: {text: ''}
     type: CheckBox
-    layout_properties: {grid_position: 'POMOEI,PIVKVQ'}
+    layout_properties: {grid_position: 'POMOEI,PIVKVQ QHDKAX,XZPOBG'}
+  - name: check_box_1_copy
+    properties: {text: ''}
+    type: CheckBox
+    layout_properties: {grid_position: 'POMOEI,PIVKVQ WOUMHG,TXCUGZ'}
+  - name: check_box_2_copy_copy
+    properties: {text: '', allow_indeterminate: true}
+    type: CheckBox
+    layout_properties: {grid_position: 'POMOEI,PIVKVQ BNXFHW,FPOXZS'}
+  - name: check_box_1_copy_copy_2
+    properties: {text: ''}
+    type: CheckBox
+    layout_properties: {grid_position: 'POMOEI,PIVKVQ AQBIQZ,FEKQCH'}
   - name: button_1
-    properties: {text: button_1}
+    properties: {text: Play, border: groove}
     type: Button
-    layout_properties: {grid_position: 'POMOEI,XTFIRR'}
+    layout_properties: {grid_position: 'POMOEI,OLASRF WYWZEF,UYBUZW'}
+  - name: button_1_copy
+    properties: {text: Play, border: groove}
+    type: Button
+    layout_properties: {grid_position: 'POMOEI,OLASRF RMKINB,UIVLJN'}
+  - name: button_1_copy_copy
+    properties: {text: Play, border: groove}
+    type: Button
+    layout_properties: {grid_position: 'POMOEI,OLASRF CHNNYS,XMUCPZ'}
+  - name: button_1_copy_copy_2
+    properties: {text: Play, border: groove}
+    type: Button
+    layout_properties: {grid_position: 'POMOEI,OLASRF ASYBXN,AUQRMV'}
   - name: check_box_2
     properties: {text: '', allow_indeterminate: true}
     type: CheckBox
-    layout_properties: {grid_position: 'POMOEI,ZWXSTH'}
+    layout_properties: {grid_position: 'POMOEI,ZWXSTH PAOFPU,XPBWXE'}
+  - name: check_box_2_copy
+    properties: {text: '', allow_indeterminate: true}
+    type: CheckBox
+    layout_properties: {grid_position: 'POMOEI,ZWXSTH XSOWXC,QJNJGA'}
+  - name: check_box_1_copy_copy
+    properties: {text: ''}
+    type: CheckBox
+    layout_properties: {grid_position: 'POMOEI,ZWXSTH WOTBTU,CKRLTE'}
+  - name: check_box_2_copy_copy_2
+    properties: {text: '', allow_indeterminate: true}
+    type: CheckBox
+    layout_properties: {grid_position: 'POMOEI,ZWXSTH WEKILP,SAYIZE'}
   - name: button_2
-    properties: {text: button_2}
+    properties: {text: Play, border: groove}
     type: Button
-    layout_properties: {grid_position: 'POMOEI,NDBKYY'}
+    layout_properties: {grid_position: 'POMOEI,NDBKYY NWTKUH,JVQTWQ'}
+  - name: button_2_copy
+    properties: {text: Play, border: groove}
+    type: Button
+    layout_properties: {grid_position: 'POMOEI,NDBKYY FOFSUO,ONTNNZ'}
+  - name: button_2_copy_copy
+    properties: {text: Play, border: groove}
+    type: Button
+    layout_properties: {grid_position: 'POMOEI,NDBKYY PMLRMX,CMIRMM'}
+  - name: button_2_copy_copy_2
+    properties: {text: Play, border: groove}
+    type: Button
+    layout_properties: {grid_position: 'POMOEI,NDBKYY FNRVIF,RIRZSU'}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'FVXOWV,OUGXRC'}
   - name: button_3
-    properties: {text: button_3}
+    properties: {text: Enter New Prompt, spacing_above: large, font_size: 20, border: groove}
     type: Button
-    layout_properties: {grid_position: 'RHFHPE,LAUQCS'}
-  - name: button_4
-    properties: {text: button_4}
+    layout_properties: {grid_position: 'BMLFWL,KHKDTZ'}
+  - name: button_3_copy
+    properties: {text: Retry, spacing_above: large, font_size: 20, border: groove}
     type: Button
-    layout_properties: {grid_position: 'RHFHPE,VUOIAZ'}
-  - name: button_5
-    properties: {text: button_5}
+    layout_properties: {grid_position: 'BMLFWL,JMUWYA'}
+  - name: button_3_copy_2
+    properties: {text: Export Selected Assets, spacing_above: large, font_size: 20,
+      border: groove}
     type: Button
-    layout_properties: {grid_position: 'ADCKRW,TPQPME'}
-  - name: button_6
-    properties: {text: button_6}
-    type: Button
-    layout_properties: {grid_position: 'ADCKRW,DWQBLN'}
-  - name: button_7
-    properties: {text: button_7}
-    type: Button
-    layout_properties: {grid_position: 'OAVYBC,HZQAFO'}
-  - name: button_8
-    properties: {text: button_8}
-    type: Button
-    layout_properties: {grid_position: 'OAVYBC,JUDOLY'}
+    layout_properties: {grid_position: 'BMLFWL,RCKEOX'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
