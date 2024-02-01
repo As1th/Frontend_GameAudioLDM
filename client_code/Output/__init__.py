@@ -20,5 +20,7 @@ class Output(OutputTemplate):
   def PlayAudio1(self, **event_args):
     self.call_js('PlayAudio1')
 
-  #def CheckAudio1(self, **event_args):
-    
+  def CheckAudio1(self, **event_args):
+    if self.Audio1Checked == 1:
+       self.Audio1Checked == 0
+       
