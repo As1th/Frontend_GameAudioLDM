@@ -37,6 +37,7 @@ components:
     properties: {text: ''}
     type: CheckBox
     layout_properties: {grid_position: 'POMOEI,PIVKVQ WOUMHG,DPJLDV'}
+    event_bindings: {change: CheckAudio4}
   - name: spacer_7_copy_2
     properties: {height: -1.45452880859375}
     type: Spacer
@@ -45,6 +46,7 @@ components:
     properties: {text: ''}
     type: CheckBox
     layout_properties: {grid_position: 'POMOEI,PIVKVQ GYNNDQ,PZUZIR'}
+    event_bindings: {change: CheckAudio7}
   - name: audio_play_1
     properties: {role: null, align: center, border: '', foreground: 'theme:White',
       text: Play, font_size: 18, font: Chilanka, background: 'theme:Gray 600', bold: true,
@@ -67,6 +69,7 @@ components:
     properties: {text: '', allow_indeterminate: true}
     type: CheckBox
     layout_properties: {grid_position: 'POMOEI,ZWXSTH PAOFPU,XPBWXE'}
+    event_bindings: {change: CheckAudio2}
   - name: spacer_6_copy
     properties: {height: 0.727294921875}
     type: Spacer
@@ -75,6 +78,7 @@ components:
     properties: {text: '', allow_indeterminate: true}
     type: CheckBox
     layout_properties: {grid_position: 'POMOEI,ZWXSTH XSOWXC,QJNJGA'}
+    event_bindings: {change: CheckAudio5}
   - name: spacer_7_copy
     properties: {height: -2.363616943359375}
     type: Spacer
@@ -83,6 +87,7 @@ components:
     properties: {text: ''}
     type: CheckBox
     layout_properties: {grid_position: 'POMOEI,ZWXSTH KHGUDY,JKUJJK'}
+    event_bindings: {change: CheckAudio18}
   - name: audio_play_2
     properties: {text: Play, border: '', bold: true, font: Chilanka, icon: 'fa:play-circle',
       font_size: 18, background: 'theme:Gray 600', foreground: 'theme:White'}
@@ -102,6 +107,7 @@ components:
     properties: {text: ''}
     type: CheckBox
     layout_properties: {grid_position: 'POMOEI,EWGASQ AIGCLF,DJOGTJ'}
+    event_bindings: {change: CheckAudio3}
   - name: spacer_6
     properties: {height: 0.18182373046875}
     type: Spacer
@@ -110,6 +116,7 @@ components:
     properties: {text: '', allow_indeterminate: true}
     type: CheckBox
     layout_properties: {grid_position: 'POMOEI,EWGASQ VQSWMV,NWHYAX'}
+    event_bindings: {change: CheckAudio6}
   - name: spacer_7
     properties: {height: -2.727264404296875}
     type: Spacer
@@ -118,6 +125,7 @@ components:
     properties: {text: '', allow_indeterminate: true}
     type: CheckBox
     layout_properties: {grid_position: 'POMOEI,EWGASQ TSLMSO,XNTIQY'}
+    event_bindings: {change: CheckAudio9}
   - name: audio_play_3
     properties: {text: Play, border: '', font: Chilanka, bold: true, icon: 'fa:play-circle',
       font_size: 18, foreground: 'theme:White', background: 'theme:Gray 600'}
