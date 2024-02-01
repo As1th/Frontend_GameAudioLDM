@@ -48,30 +48,13 @@
 sound.play('laser');
 </script>
 <script>
-function PlaySound() {
+function PlayAudio1() {
           var sound = document.getElementById("audio");
           sound.play()
       }
 
 </script>
-<script>
-  
-function GetSound() {
-          var sound = document.getElementById("audio");
-          return sound;
-      }
-function SetSound(data) {
-          function PlaySound2(sound) {
-         
-            sound.play()
-          }
-          console.log("setting");
-          const audioElement = new Audio(data);
-          console.log("lol" + audioElement);
-          console.log("lol" + data);
-          PlaySound2(audioElement);
-      }
-</script>
+
 <script>
   function hideSidebar() {
     var ln = $('.structure > .nav-holder > .left-nav');
