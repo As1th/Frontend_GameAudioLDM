@@ -21,6 +21,9 @@ class Output(OutputTemplate):
     self.call_js('PlayAudio1')
 
   def CheckAudio1(self, **event_args):
-    if self.Audio1Checked == 1:
-       self.Audio1Checked == 0
+    if self.audio_check_1.checked:
+       self.audio_play_1.background = 'theme:Primary 500'
+    else:
+       self.audio_play_1.background = 'theme:Gray 600'
+       
        

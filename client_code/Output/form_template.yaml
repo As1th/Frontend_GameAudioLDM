@@ -28,6 +28,7 @@ components:
     properties: {text: ''}
     type: CheckBox
     layout_properties: {grid_position: 'POMOEI,PIVKVQ QHDKAX,XZPOBG'}
+    event_bindings: {change: CheckAudio1}
   - name: spacer_6_copy_copy
     properties: {height: 0.727294921875}
     type: Spacer
@@ -46,20 +47,20 @@ components:
     layout_properties: {grid_position: 'POMOEI,PIVKVQ GYNNDQ,PZUZIR'}
   - name: audio_play_1
     properties: {role: null, align: center, border: '', foreground: 'theme:White',
-      text: Play, font_size: 18, font: Chilanka, background: 'theme:Primary 500',
-      bold: true, icon: 'fa:play-circle'}
+      text: Play, font_size: 18, font: Chilanka, background: 'theme:Gray 600', bold: true,
+      icon: 'fa:play-circle'}
     type: Button
     layout_properties: {grid_position: 'POMOEI,OLASRF WYWZEF,UYBUZW', full_width_row: true}
     event_bindings: {click: PlayAudio1}
     data_bindings: []
   - name: audio_play_4
     properties: {text: Play, border: '', bold: true, font: Chilanka, icon: 'fa:play-circle',
-      font_size: 18, background: 'theme:Primary 500', foreground: 'theme:White'}
+      font_size: 18, background: 'theme:Gray 600', foreground: 'theme:White'}
     type: Button
     layout_properties: {grid_position: 'POMOEI,OLASRF RMKINB,UIVLJN'}
   - name: audio_play_7
     properties: {text: Play, border: '', font: Chilanka, bold: true, icon: 'fa:play-circle',
-      font_size: 18, foreground: 'theme:White', background: 'theme:Primary 500'}
+      font_size: 18, foreground: 'theme:White', background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: 'POMOEI,OLASRF ASYBXN,AUQRMV'}
   - name: audio_check_2
@@ -84,17 +85,17 @@ components:
     layout_properties: {grid_position: 'POMOEI,ZWXSTH KHGUDY,JKUJJK'}
   - name: audio_play_2
     properties: {text: Play, border: '', bold: true, font: Chilanka, icon: 'fa:play-circle',
-      font_size: 18, background: 'theme:Primary 500', foreground: 'theme:White'}
+      font_size: 18, background: 'theme:Gray 600', foreground: 'theme:White'}
     type: Button
     layout_properties: {grid_position: 'POMOEI,NDBKYY NWTKUH,JVQTWQ'}
   - name: audio_play_5
     properties: {text: Play, border: '', bold: true, font: Chilanka, icon: 'fa:play-circle',
-      font_size: 18, foreground: 'theme:White', background: 'theme:Primary 500'}
+      font_size: 18, foreground: 'theme:White', background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: 'POMOEI,NDBKYY FOFSUO,ONTNNZ'}
   - name: audio_play_8
     properties: {text: Play, border: '', bold: true, font: Chilanka, icon: 'fa:play-circle',
-      font_size: 18, background: 'theme:Primary 500', foreground: 'theme:White'}
+      font_size: 18, background: 'theme:Gray 600', foreground: 'theme:White'}
     type: Button
     layout_properties: {grid_position: 'POMOEI,NDBKYY XTCDZA,QWJLFE'}
   - name: audio_check_3
@@ -119,18 +120,18 @@ components:
     layout_properties: {grid_position: 'POMOEI,EWGASQ TSLMSO,XNTIQY'}
   - name: audio_play_3
     properties: {text: Play, border: '', font: Chilanka, bold: true, icon: 'fa:play-circle',
-      font_size: 18, foreground: 'theme:White', background: 'theme:Primary 500'}
+      font_size: 18, foreground: 'theme:White', background: 'theme:Gray 600'}
     type: Button
     layout_properties: {grid_position: 'POMOEI,YFXCZN XVMWWA,XLILTX'}
   - name: audio_play_6
     properties: {text: Play, border: '', bold: true, font: Chilanka, icon: 'fa:play-circle',
-      font_size: 18, background: 'theme:Primary 500', foreground: 'theme:White'}
+      font_size: 18, background: 'theme:Gray 600', foreground: 'theme:White'}
     type: Button
     layout_properties: {grid_position: 'POMOEI,YFXCZN MCEAEM,UJJQFG'}
   - name: audio_play_9
     properties: {role: null, align: center, border: '', foreground: 'theme:White',
-      text: Play, font_size: 18, font: Chilanka, background: 'theme:Primary 500',
-      bold: true, icon: 'fa:play-circle'}
+      text: Play, font_size: 18, font: Chilanka, background: 'theme:Gray 600', bold: true,
+      icon: 'fa:play-circle'}
     type: Button
     layout_properties: {grid_position: 'POMOEI,YFXCZN MVSLIE,PWGOVT'}
     event_bindings: {click: PlayAudio1}
