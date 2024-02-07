@@ -17,7 +17,7 @@ class Input(InputTemplate):
                                 )
     # If a category is returned set our species 
     if audio:
-      self.negativePrompt.text = "The species is " + audio
+      self.negative_prompt.text = "The species is " + audio
 
     #open_form('Output')
 
