@@ -34,19 +34,36 @@
 <audio id="audio" src="https://file-examples.com/storage/fed61549c865b2b5c9768b5/2017/11/file_example_WAV_1MG.wav" autostart="false" ></audio>
 <audio id="audio2" autostart="false" ></audio>
 <script src="_/theme/Howler/howler.js"></script>
-<script>
- var sound = new Howl({
-  src: ['https://file-examples.com/storage/fed61549c865b2b5c9768b5/2017/11/file_example_WAV_1MG.wav'],
-  sprite: {
-    blast: [0, 3000],
-    laser: [4000, 1000],
-    winner: [6000, 5000]
-  }
-});
 
-// Shoot the laser!
-sound.play('laser');
+<script>
+function PlayAudioFromBytes(audioBytes) {
+    // Decode the base64-encoded audio data to a byte array
+    var decodedData = atob(audioBytes);
+
+    // Convert the byte array to an array buffer
+    var buffer = new ArrayBuffer(decodedData.length);
+    var view = new Uint8Array(buffer);
+    for (var i = 0; i < decodedData.length; i++) {
+        view[i] = decodedData.charCodeAt(i);
+    }
+
+    // Create a Blob object from the array buffer
+    var blob = new Blob([buffer], { type: 'audio/wav' });
+
+    // Create a URL for the Blob object
+    var url = URL.createObjectURL(blob);
+
+    // Create an audio object using Howler.js
+    var sound = new Howl({
+        src: [url],
+        format: ['wav']
+    });
+
+    // Play the audio
+    sound.play();
+}
 </script>
+
 <script>
 function PlayAudio1() {
           var sound = document.getElementById("audio");
