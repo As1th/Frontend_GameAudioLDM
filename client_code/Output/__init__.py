@@ -19,11 +19,11 @@ class Output(OutputTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-  def PlayAudio1(self, **event_args):
-    self.call_js('PlayAudio1')
+
 
   def CheckAudio1(self, **event_args):
     self.CheckAudio(self.audio_check_1, self.audio_play_1)
+    self.call_js('PlaySavedAudio', 0)
   def CheckAudio2(self, **event_args):
     self.CheckAudio(self.audio_check_2, self.audio_play_2)
   def CheckAudio3(self, **event_args):

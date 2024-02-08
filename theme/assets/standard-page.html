@@ -36,7 +36,9 @@
 <script src="_/theme/Howler/howler.js"></script>
 
 <script>
-  var audioHowls = {};
+// Check if audioHowls is stored in localStorage and initialize it
+var audioHowls = JSON.parse(localStorage.getItem('audioHowls')) || {};
+
 function SaveAudioFromBytes(audioBytes, audioId) {
     // Decode the base64-encoded audio data to a byte array
     var decodedData = atob(audioBytes);
@@ -54,17 +56,37 @@ function SaveAudioFromBytes(audioBytes, audioId) {
     // Create a URL for the Blob object
     var url = URL.createObjectURL(blob);
 
+    // Save the URL in the audioHowls object
+    audioHowls[audioId] = url;
+
+    // Save the updated audioHowls object in localStorage
+    localStorage.setItem('audioHowls', JSON.stringify(audioHowls));
+
     // Create an audio object using Howler.js
     var sound = new Howl({
         src: [url],
         format: ['wav']
     });
 
-    // Save the Howl object in the global audioHowls object
-    audioHowls[audioId] = sound;
-
     // Play the audio
     sound.play();
+}
+
+function PlaySavedAudio(audioId) {
+    // Check if the audioId exists in the audioHowls object
+    if (audioHowls.hasOwnProperty(audioId)) {
+        // Retrieve the URL from the audioHowls object
+        var url = audioHowls[audioId];
+        
+        // Create an audio object using Howler.js
+        var sound = new Howl({
+            src: [url],
+            format: ['wav']
+        });
+        
+        // Play the audio
+        sound.play();
+    }
 }
 </script>
 
