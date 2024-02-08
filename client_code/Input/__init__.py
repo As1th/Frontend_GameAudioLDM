@@ -34,7 +34,8 @@ class Input(InputTemplate):
     audio_data.append(audio_2)
     #for audio in audio_data: 
     #  self.call_js('SaveAudioFromBytes',audio, audio_data.index(audio))
-    self.call_js('SaveAudioFromBytes',audio, 0)
+    self.call_js('SaveAudioFromBytes',audio_base64, 0)
+    self.call_js('SaveAudioFromBytes',audio_2, 1)
     open_form('Output')
   
   def PlayAudio1(self, **event_args):
