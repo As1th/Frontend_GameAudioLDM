@@ -163,6 +163,7 @@ components:
       border: groove, font: Chilanka, bold: true, icon: 'fa:download'}
     type: Button
     layout_properties: {grid_position: 'BMLFWL,RCKEOX'}
+    event_bindings: {click: ExportAssets}
 - type: FlowPanel
   properties: {}
   name: navbar_links

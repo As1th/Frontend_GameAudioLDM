@@ -21,6 +21,10 @@ class Output(OutputTemplate):
     # Any code you write here will run before the form opens.
 
 
+  def ExportAssets(self, **event_args):
+    self.call_js('DownloadSavedAudio', 1)
+    self.call_js('DownloadSavedAudio', 1)
+  
   def CheckAudio1(self, **event_args):
     self.CheckAudio(self.audio_check_1, self.audio_play_1)
     self.call_js('PlaySavedAudio', 0)

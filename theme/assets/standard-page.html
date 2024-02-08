@@ -58,7 +58,7 @@ function SaveAudioFromBytes(audioBytes, audioId) {
 
     // Save the URL in the audioHowls object
     audioHowls[audioId] = url;
-
+    alert("saved an audio to" + audioId)
     // Save the updated audioHowls object in localStorage
     localStorage.setItem('audioHowls', JSON.stringify(audioHowls));
 
@@ -88,6 +88,32 @@ function PlaySavedAudio(audioId) {
         sound.play();
     }
 }
+
+function DownloadSavedAudio(audioId) {
+    // Check if the audioId exists in the audioHowls object
+   
+    if (audioHowls.hasOwnProperty(audioId)) {
+        // Retrieve the URL from the audioHowls object
+        var url = audioHowls[audioId];
+
+        // Create an anchor element for the download link
+        var link = document.createElement('a');
+        link.href = url;
+        link.download = 'audio.wav'; // Set the default filename
+        link.style.display = 'none';
+
+        // Append the anchor element to the document body
+        document.body.appendChild(link);
+
+        // Trigger a click event on the anchor element to initiate the download
+        link.click();
+
+        // Remove the anchor element from the document body
+        document.body.removeChild(link);
+    }
+}
+
+
 </script>
 
 
