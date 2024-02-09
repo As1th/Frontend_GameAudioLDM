@@ -38,6 +38,14 @@ class Output(OutputTemplate):
             self.call_js('DownloadSavedAudio', i)
 
 
+  def PlayAudio(self, **event_args):
+    # Extract the number from the button name
+    button_name = event_args['sender'].tooltip
+    audio_number = int(button_name.split()[-1]) - 1
+    
+    # Call the JavaScript function with the extracted audio number
+    self.call_js('PlaySavedAudio', audio_number)
+    
 
   
   def CheckAudio1(self, **event_args):
