@@ -69,8 +69,6 @@ class Output(OutputTemplate):
     self.CheckAudio(self.audio_check_9, self.audio_play_9)
 
   def CheckAudio(self, checkbox, player):
-    button_name = event_args['sender'].tooltip
-    audio_number = int(button_name.split()[-1]) - 1
     if checkbox.checked:
        player.background = 'theme:Primary 500'
     else:
