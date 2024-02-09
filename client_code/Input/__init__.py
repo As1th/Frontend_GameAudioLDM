@@ -36,7 +36,8 @@ class Input(InputTemplate):
     #  self.call_js('SaveAudioFromBytes',audio, audio_data.index(audio))
     self.call_js('SaveAudioFromBytes',audio_base64, 0)
     self.call_js('SaveAudioFromBytes',audio_2, 1)
-    open_form('Output')
+   
+    open_form('Output', gens= self.number_of_gens.selected_value)
   
   def PlayAudio1(self, **event_args):
     sound = self.call_js('PlayAudio1')

@@ -58,7 +58,7 @@ function SaveAudioFromBytes(audioBytes, audioId) {
 
     // Save the URL in the audioHowls object
     audioHowls[audioId] = url;
-    alert("saved an audio to" + audioId)
+  
     // Save the updated audioHowls object in localStorage
     localStorage.setItem('audioHowls', JSON.stringify(audioHowls));
 
