@@ -46,7 +46,7 @@ class Output(OutputTemplate):
     # Call the JavaScript function with the extracted audio number
     self.call_js('PlaySavedAudio', audio_number)
     
-
+  
   
   def CheckAudio1(self, **event_args):
     self.CheckAudio(self.audio_check_1, self.audio_play_1)
@@ -69,6 +69,8 @@ class Output(OutputTemplate):
     self.CheckAudio(self.audio_check_9, self.audio_play_9)
 
   def CheckAudio(self, checkbox, player):
+    button_name = event_args['sender'].tooltip
+    audio_number = int(button_name.split()[-1]) - 1
     if checkbox.checked:
        player.background = 'theme:Primary 500'
     else:
