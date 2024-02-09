@@ -3,16 +3,6 @@ from anvil import *
 import anvil.server
 numberOfGenerations = 0
 class Output(OutputTemplate):
-  Audio1Checked = 0
-  Audio2Checked = 0
-  Audio3Checked = 0
-  Audio4Checked = 0
-  Audio5Checked = 0
-  Audio6Checked = 0
-  Audio7Checked = 0
-  Audio8Checked = 0
-  Audio9Checked = 0
-  
 
   def __init__(self, gens, **properties):
     # Set Form properties and Data Bindings.
@@ -36,15 +26,23 @@ class Output(OutputTemplate):
 
 
   def ExportAssets(self, **event_args):
-    self.call_js('DownloadSavedAudio', 0)
-    self.call_js('DownloadSavedAudio', 1)
+    audio_variables = [
+        self.audio_check_1, self.audio_check_2, self.audio_check_3,
+        self.audio_check_4, self.audio_check_5, self.audio_check_6,
+        self.audio_check_7, self.audio_check_8, self.audio_check_9
+    ]
+    
+    for i, checkbox in enumerate(audio_variables):
+        if checkbox.checked:
+            # Trigger download for this audio number
+            self.call_js('DownloadSavedAudio', i)
 
 
 
   
   def CheckAudio1(self, **event_args):
     self.CheckAudio(self.audio_check_1, self.audio_play_1)
-    self.call_js('PlaySavedAudio', 0)
+
   def CheckAudio2(self, **event_args):
     self.CheckAudio(self.audio_check_2, self.audio_play_2)
   def CheckAudio3(self, **event_args):

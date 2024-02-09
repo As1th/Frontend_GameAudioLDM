@@ -39,8 +39,7 @@ class Input(InputTemplate):
    
     open_form('Output', gens= self.number_of_gens.selected_value)
   
-  def PlayAudio1(self, **event_args):
-    sound = self.call_js('PlayAudio1')
+
     
     
 
