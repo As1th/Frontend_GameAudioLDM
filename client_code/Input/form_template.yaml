@@ -48,8 +48,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'YSKFPH,LDMJLD'}
     - name: negative_prompt
-      properties: {placeholder: 'low quality, average quality', text: 'low quality,
-          average quality'}
+      properties: {placeholder: 'low quality, average quality, background noise',
+        text: 'low quality, average quality'}
       type: TextBox
       layout_properties: {grid_position: 'YSKFPH,NXXSMR'}
     - name: label_1_copy
