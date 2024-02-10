@@ -10,12 +10,14 @@ class Input(InputTemplate):
     self.init_components(**properties)
     
     # Any code you write here will run before the form opens  
-    
+
+  
   
   def generate_button_click(self, **event_args):
+   
     # Call the google colab function and pass it the iris measurements
     audio_base64_list = anvil.server.call('GenerateAudio', 
-                                self.prompt.text, self.negative_prompt.text, 3
+                                self.prompt.text, self.negative_prompt.text, int(self.number_of_gens.selected_value)
                                 )
     for index, audio_base64 in enumerate(audio_base64_list):
         # Call the JavaScript function to save the audio data
