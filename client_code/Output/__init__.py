@@ -73,6 +73,10 @@ class Output(OutputTemplate):
        player.background = 'theme:Primary 500'
     else:
        player.background = 'theme:Gray 600'
+
+  def NewPrompt(self, **event_args):
+    open_form('Input')
+    
        
   
        
