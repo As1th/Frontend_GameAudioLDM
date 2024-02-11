@@ -13,8 +13,7 @@ class Input(InputTemplate):
     self.init_components(**properties)
   
   def generate_button_click(self, **event_args):
-    open_form('Output', gens= self.number_of_gens.selected_value)
-    # Call the google colab function and pass it the iris measurements
+    # Call the google colab function and pass it the parameters
     audio_base64_list = anvil.server.call('GenerateAudio', 
                                 self.prompt.text, self.negative_prompt.text, int(self.number_of_gens.selected_value)
                                 )
