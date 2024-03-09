@@ -13,7 +13,14 @@ class Input(InputTemplate):
     self.init_components(**properties)
   
   def generate_button_click(self, **event_args):
-    
+    # Regular expression pattern to match alphanumeric characters
+    alphanumeric_pattern = re.compile(r'^[a-zA-Z0-9\s]+$')
+
+    # Validate prompt and negative prompt
+    if not alphanumeric_pattern.match(self.prompt.text) or not alphanumeric_pattern.match(self.negative_prompt.text):
+        # Display error alert
+        alert("Error: Prompts should only contain alphanumeric characters.")
+        return
     # Call the google colab function and pass it the parameters
     audio_base64_list = anvil.server.call('GenerateAudio', 
                                 self.prompt.text, self.negative_prompt.text, int(self.number_of_gens.selected_value)
