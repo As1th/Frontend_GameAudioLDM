@@ -20,7 +20,7 @@ class Input(InputTemplate):
     # Validate prompt and negative prompt
     if not alphanumeric_pattern.match(self.prompt.text) or ',' in self.prompt.text:
         # Display error alert
-        alert("Error: Prompts should only contain alphanumeric characters, except for the negative prompt.")
+        alert("Error: Prompts should only contain alphanumeric characters.")
         return
 
     # Call the google colab function and pass it the parameters
