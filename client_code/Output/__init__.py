@@ -8,7 +8,7 @@ class Output(OutputTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     numberOfGenerations = int(gens)
-    for i in range(1, 10):
+    for i in range(1, 13):
         # Get the checkbox and button components by name
         checkbox = getattr(self, f'audio_check_{i}')
         button = getattr(self, f'audio_play_{i}')
@@ -29,7 +29,8 @@ class Output(OutputTemplate):
     audio_variables = [
         self.audio_check_1, self.audio_check_2, self.audio_check_3,
         self.audio_check_4, self.audio_check_5, self.audio_check_6,
-        self.audio_check_7, self.audio_check_8, self.audio_check_9
+        self.audio_check_7, self.audio_check_8, self.audio_check_9,
+        self.audio_check_10, self.audio_check_11, self.audio_check_12
     ]
     
     for i, checkbox in enumerate(audio_variables):
@@ -67,6 +68,12 @@ class Output(OutputTemplate):
     self.CheckAudio(self.audio_check_8, self.audio_play_8)
   def CheckAudio9(self, **event_args):
     self.CheckAudio(self.audio_check_9, self.audio_play_9)
+  def CheckAudio10(self, **event_args):
+    self.CheckAudio(self.audio_check_10, self.audio_play_10)
+  def CheckAudio11(self, **event_args):
+    self.CheckAudio(self.audio_check_11, self.audio_play_11)
+  def CheckAudio12(self, **event_args):
+    self.CheckAudio(self.audio_check_12, self.audio_play_12)
 
   def CheckAudio(self, checkbox, player):
     if checkbox.checked:

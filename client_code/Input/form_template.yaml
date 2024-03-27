@@ -28,7 +28,7 @@ components:
     layout_properties: {grid_position: 'BLJJOU,VVQYJU'}
   - name: number_of_gens
     properties:
-      items: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+      items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
       align: left
       font_size: 19
       spacing_above: large
