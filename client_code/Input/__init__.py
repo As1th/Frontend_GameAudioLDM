@@ -23,9 +23,12 @@ class Input(InputTemplate):
         alert("Error: Prompts should only contain alphanumeric characters.")
         return
 
+    # Convert prompt text to lowercase, except for the first letter
+    prompt_text = self.prompt.text
+    prompt_text = prompt_text[0].upper() + prompt_text[1:].lower()
     # Call the google colab function and pass it the parameters
     audio_base64_list = anvil.server.call('GenerateAudio', 
-                                self.prompt.text, self.negative_prompt.text, int(self.number_of_gens.selected_value)
+                                prompt_text, self.negative_prompt.text, int(self.number_of_gens.selected_value)
                                 )
     for index, audio_base64 in enumerate(audio_base64_list):
         # Call the JavaScript function to save the audio data
