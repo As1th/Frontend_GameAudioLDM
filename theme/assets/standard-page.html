@@ -42,33 +42,25 @@ var audioHowls = JSON.parse(localStorage.getItem('audioHowls')) || {};
 function SaveAudioFromBytes(audioBytes, audioId) {
     // Decode the base64-encoded audio data to a byte array
     var decodedData = atob(audioBytes);
-
     // Convert the byte array to an array buffer
     var buffer = new ArrayBuffer(decodedData.length);
     var view = new Uint8Array(buffer);
     for (var i = 0; i < decodedData.length; i++) {
         view[i] = decodedData.charCodeAt(i);
     }
-
     // Create a Blob object from the array buffer
     var blob = new Blob([buffer], { type: 'audio/wav' });
-
     // Create a URL for the Blob object
     var url = URL.createObjectURL(blob);
-
     // Save the URL in the audioHowls object
     audioHowls[audioId] = url;
-  
     // Save the updated audioHowls object in localStorage
     localStorage.setItem('audioHowls', JSON.stringify(audioHowls));
-
     // Create an audio object using Howler.js
     var sound = new Howl({
         src: [url],
         format: ['wav']
     });
-
-  
 }
 
 function PlaySavedAudio(audioId) {
