@@ -51,7 +51,7 @@ components:
       layout_properties: {grid_position: 'YSKFPH,LDMJLD'}
     - name: negative_prompt
       properties: {placeholder: 'low quality, average quality, background noise',
-        text: 'low quality, average quality'}
+        text: 'low quality, average quality, background noise'}
       type: TextBox
       layout_properties: {grid_position: 'YSKFPH,NXXSMR'}
   - name: generate_button
@@ -70,3 +70,7 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- name: headline_1
+  properties: {role: headline, text: GameAudioLDM}
+  type: Label
+  layout_properties: {slot: title}
